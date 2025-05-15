@@ -107,31 +107,39 @@ const Navbar = () => {
 			)}
 
 			<div className='container flex flex-gap-3'>
-				<Link to='/'>
-					<div className='flex dropdown-parent' style={{ width: '300px' }}>
-						<img className='logo' src={teams[club]?.logo} alt={club} />
-						<span className='fs-md color-title club-name'>{club}</span>
-						<div className='dropdown'>
-							<div className='flex flex-col dropdown-item'>
-								{Object.keys(teams)
-									.filter((prsClub) => prsClub !== club)
-									.map((e) => (
-										<div
-											key={e}
-											className=' dropdown-item'
-											style={{ backgroundImage: `url(${teams[e].background})` }}
-											onClick={() => setClub(e)}
-										>
-											<div className='flex '>
-												<img className='logo' src={teams[e].logo} alt={e} />
-												<span className='fs-md color-title club-name'>{e}</span>
+				{location.pathname !== '/' ? (
+					<Link to='/'>
+						<div className='flex dropdown-parent' style={{ width: '300px' }}>
+							<img className='logo' src={teams[club]?.logo} alt={club} />
+							<span className='fs-md color-title club-name'>{club}</span>
+							<div className='dropdown'>
+								<div className='flex flex-col dropdown-item'>
+									{Object.keys(teams)
+										.filter((prsClub) => prsClub !== club)
+										.map((e) => (
+											<div
+												key={e}
+												className=' dropdown-item'
+												style={{
+													backgroundImage: `url(${teams[e].background})`,
+												}}
+												onClick={() => setClub(e)}
+											>
+												<div className='flex '>
+													<img className='logo' src={teams[e].logo} alt={e} />
+													<span className='fs-md color-title club-name'>
+														{e}
+													</span>
+												</div>
 											</div>
-										</div>
-									))}
+										))}
+								</div>
 							</div>
 						</div>
-					</div>
-				</Link>
+					</Link>
+				) : (
+					<img className='logo' src={teams[club]?.logo} alt={club} />
+				)}
 
 				{location.pathname === '/home' && (
 					<div className='container flex flex-gap-3'>
