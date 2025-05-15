@@ -1,24 +1,21 @@
 footer {
-    background-color: var(--navbar-bg);
-    color: #fff; /* Set all text to white */
-    text-align: center; /* Center align all text */
-    padding: 1rem 0;
-    width: 100vw;
-    bottom: 0;
-    box-sizing: border-box;
-    left: 0;
+	background-color: var(--navbar-bg);
+	color: #fff;
+	text-align: center;
+	padding: 1rem 0;
+	width: 100vw;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .footer-content a {
-    color: #fff; /* Ensure links are also white */
-    text-decoration: none;
+	color: #fff;
+	text-decoration: none;
 }
 
 .footer-content a:hover {
-    text-decoration: underline; /* Optional hover effect */
+	text-decoration: underline;
 }

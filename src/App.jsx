@@ -15,14 +15,18 @@ import Footer from './screens/Footer/Footer';
 const App = () => {
 	return (
 		<Router>
-			<Navbar className='container mb-4' />
-			<Routes>
-				<Route path='/' element={<Welcome />}></Route>
-				<Route path='/home' element={<Home />}></Route>
-				<Route path='/description/:id' element={<Description />}></Route>
-				<Route path='/cart' element={<Cart />}></Route>
-			</Routes>
-			<Footer />
+			<div className='app-wraper'>
+				<Navbar className='container mb-4' />
+				<main>
+					<Routes>
+						<Route path='/' element={<Welcome />}></Route>
+						<Route path='/home' element={<Home />}></Route>
+						<Route path='/description/:id' element={<Description />}></Route>
+						<Route path='/cart' element={<Cart />}></Route>
+					</Routes>
+				</main>
+				<Footer />
+			</div>
 		</Router>
 	);
 };

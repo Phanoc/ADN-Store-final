@@ -1,5 +1,7 @@
 .cart-items {
 	height: 100%;
+	min-height: fit-content;
+	overflow-y: auto;
 }
 
 .cart-items .grid {

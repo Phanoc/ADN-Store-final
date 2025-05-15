@@ -13,8 +13,8 @@ const Cart = () => {
 	return (
 		<div className='container cart'>
 			<div
-				className={`flex 
-					${itemsList?.length > 0 ? '' : 'flex-col'}`}
+				className={`flex
+					${itemsList?.length > 0 ? ' items-start' : 'flex-col '}`}
 			>
 				<CartItems onPassingItemList={passingItemListHandler} />
 				{itemsList?.length > 0 && <CartOrder items={itemsList} />}
