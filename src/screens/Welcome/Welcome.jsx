@@ -161,7 +161,9 @@ const Welcome = () => {
 							backgroundImage: `url(${teams[club].background})`,
 						}}
 					>
-						<h3 className='fs-md light-text text-center'>Club's Legend</h3>
+						<h3 className='fs-md light-text text-center club-name'>
+							Club's Legend
+						</h3>
 					</div>
 					{featuredItemsUpper.length > 0 && (
 						<>
@@ -181,7 +183,7 @@ const Welcome = () => {
 								<h2>
 									<a
 										href={featuredItemsUpper[currentIndexUpper]?.link}
-										className='legends-name'
+										className='legends-name club-name'
 										target='_blank'
 										rel='noopener noreferrer'
 										style={{
