@@ -8,7 +8,7 @@ const Footer = () => {
 
 	return (
 		<footer
-			className='footer'
+			className='footer mt-3'
 			style={{ backgroundImage: `url(${teams[club]?.background})` }}
 		>
 			<div className='footer-content'>

@@ -258,7 +258,6 @@ const Welcome = () => {
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 };

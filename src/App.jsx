@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Description from './screens/Description/Description';
 import Welcome from './screens/Welcome/Welcome';
 import Cart from './screens/Cart/Cart';
+import Footer from './screens/Footer/Footer';
 
 const App = () => {
 	return (
@@ -21,6 +22,7 @@ const App = () => {
 				<Route path='/description/:id' element={<Description />}></Route>
 				<Route path='/cart' element={<Cart />}></Route>
 			</Routes>
+			<Footer />
 		</Router>
 	);
 };
